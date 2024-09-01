@@ -51,6 +51,16 @@ rl.question("Enter the type of creation you're adding the leaderboard to (map, d
             rl.question("\nEnter any extra formatting to add to the tellraw: \nThis is formatted like \"color\":\"green\", \"bold\": true,\nNote the comma at the end.\n", (formatting) => {
                 rl.write("Setting up the pack...\n");
                 generateSubmissionFunctions(type, slug, message_text, formatting);
+
+                rl.question("Setup complete! Would you like to delete this setup script? (y/n)\n", (answer) => {
+                    if(answer === "y") {
+                        fs.unlink(".gitattributes", () => {});
+                        fs.unlink(".gitignore", () => {});
+                        fs.unlink("README.md", () => {});
+                        fs.unlink("setup.js", () => {});
+                    }
+                })
+
                 rl.close();
             });
         });

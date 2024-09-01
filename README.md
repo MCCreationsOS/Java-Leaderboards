@@ -1,4 +1,4 @@
-# Java-Leaderboards
+# MCCreations Java Leaderboards
  Easily implement leaderboards into your Minecraft Java Edition project!
 
 ## Setup
@@ -7,7 +7,9 @@
 1. Add the command `scoreboard players set @a MCCreations.Leaderboards.Start 1` to the commands you run when your creation starts
 2. Add the command `scoreboard players set @a MCCreations.Leaderboards.End 1` to the commands you run when your creation ends
 
-You can also add `scoreboard players set @a MCCreations.Leaderboards.Pause 1` to pause the timer, like during a cutscene
+You can also use `scoreboard players set @a MCCreations.Leaderboards.Pause 1` to pause the timer, like during a cutscene, and you can use `scoreboard players set @a MCCreations.Leaderboard.Reset 1` to reset the leaderboard for a player
+
+Finally, you can use `scoreboard players set .var MCCreations.Leaderboards.ResetOnReload 1` to cause the datapack to reset automatically on reload/relog.
 
 ### When Using MCCreations
 If you are submitting your content to MCCreations, simply check "Use Leaderboards" during the submission process and this pack will automatically be added to your creation
@@ -17,7 +19,7 @@ If you plan on uploading your creation to other sites, or want to use a file hos
 
 1. Download this Github Repository
 2. Unzip it (if you downloaded as a zip)
-3. Run `node setup.js`. This requires you to have nodejs installed, which you can get [here](https://nodejs.org/en)
+3. Run `node setup.js`. This requires you to have nodejs installed, which you can get [here](https://nodejs.org)
 4. Add the datapack to your creation
 
 
