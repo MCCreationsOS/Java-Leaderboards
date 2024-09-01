@@ -1,6 +1,15 @@
 {
 	"pack": {
-		"pack_format": 41,
-		"description": "Allows for the easy creation and submission of leaderboards to MCCreations"
+		"pack_format": 48,
+		"description": "Allows for the easy creation and submission of leaderboards to MCCreations",
+		"supported_formats": [48, 48]
+	},
+	"overlays": {
+		"entries": [
+			{
+				"formats": [4, 41],
+				"directory": "older_versions"
+			}
+		]
 	}
 }
