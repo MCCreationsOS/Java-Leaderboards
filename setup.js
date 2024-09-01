@@ -61,9 +61,9 @@ rl.question("Enter the type of creation you're adding the leaderboard to (map, d
                         fs.unlink("README.md", () => {});
                         fs.unlink("setup.js", () => {});
                     }
+                    rl.close();
                 })
 
-                rl.close();
             });
         });
     });
