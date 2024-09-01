@@ -38,10 +38,10 @@ scoreboard players set @a MCCreations.Leaderboards.EnableTriggers 1
 
 This will allow non-op players to use the following commands, which are equivalent to the commands above:
 ```mcfunction
-/trigger MCCreations.Leaderboards.Start
-/trigger MCCreations.Leaderboards.Pause
-/trigger MCCreations.Leaderboards.End
-/trigger MCCreations.Leaderboards.DisplayTime
+trigger MCCreations.Leaderboards.Start
+trigger MCCreations.Leaderboards.Pause
+trigger MCCreations.Leaderboards.End
+trigger MCCreations.Leaderboards.DisplayTime
 ```
 
 #### Reset on Reload
