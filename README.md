@@ -50,3 +50,6 @@ You can configure the datapack to be reset on reload or relog using the command
 scoreboard players set .var MCCreations.Leaderboards.ResetOnReload 1
 ```
 This will delete all leaderboard data and scores when the pack is reloaded
+
+## Caveats
+By default, the maximum amount of time the leaderboard can save is 5 hrs. The timer and display will continue working past 5 hrs, however, scores will not be publishable to MCCreations. If this is not enough time for your map, you can change the `MAX_TIME` const in the setup.js script. However, be wary that increasing this value will exponentially increase the amount of time to generate files, as well as increase strain on the game. Values higher than 5 hrs may lag your creation.

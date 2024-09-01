@@ -1,13 +1,15 @@
 const fs = require("fs")
 const readline = require("readline")
 
+const MAX_TIME = 360_000;
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
 
 function generateSubmissionFunctions(type, slug, message_text, formatting) {
-    bt(0, 360_000, "data/mccreations/function/leaderboards/submit/gen", type, slug, message_text, formatting);
+    bt(0, MAX_TIME, "data/mccreations/function/leaderboards/submit/gen", type, slug, message_text, formatting);
     fs.writeFile("data/mccreations/function/leaderboards/submit/gen.mcfunction", `execute if score @s MCCreations.Leaderboards.Time matches 0..360000 run function mccreations:leaderboards/submit/gen/node`, () => {});
 }
 
