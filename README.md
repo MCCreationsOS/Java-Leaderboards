@@ -21,16 +21,16 @@ If you plan on uploading your creation to other sites, or want to use a file hos
 4. Add the datapack to your creation
 
 
-### Additional Setup
+## Additional Setup
 The datapack also features some extra toggle options that you can choose to turn on.
 
-#### Time Display
+### Time Display
 You can enable a timer display in the action bar by running
 ```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.DisplayTime 1
 ```
 
-#### Allow Non-OPs to Control the Leaderboard
+### Allow Non-OPs to Control the Leaderboard
 By default, only oped players have permission to make changes to the leaderboard, like stopping or starting it. To change this, run
 ```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.EnableTriggers 1
@@ -44,7 +44,7 @@ trigger MCCreations.Leaderboards.End
 trigger MCCreations.Leaderboards.DisplayTime
 ```
 
-#### Reset on Reload
+### Reset on Reload
 You can configure the datapack to be reset on reload or relog using the command
 ```mcfunction
 scoreboard players set .var MCCreations.Leaderboards.ResetOnReload 1
