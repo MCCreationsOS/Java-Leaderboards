@@ -21,3 +21,4 @@ execute if score @s MCCreations.Leaderboards.DisplayTime matches 1.. run functio
 scoreboard players reset @a[scores={MCCreations.Leaderboards.Start=1..}] MCCreations.Leaderboards.Start
 scoreboard players reset @a[scores={MCCreations.Leaderboards.Pause=1..}] MCCreations.Leaderboards.Pause
 scoreboard players reset @a[scores={MCCreations.Leaderboards.End=1..}] MCCreations.Leaderboards.End
+scoreboard players reset @a[scores={MCCreations.Leaderboards.Reset=1..}] MCCreations.Leaderboards.Reset
