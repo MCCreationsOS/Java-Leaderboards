@@ -7,9 +7,7 @@
 1. Add the command `scoreboard players set @a MCCreations.Leaderboards.Start 1` to the commands you run when your creation starts
 2. Add the command `scoreboard players set @a MCCreations.Leaderboards.End 1` to the commands you run when your creation ends
 
-You can also use `scoreboard players set @a MCCreations.Leaderboards.Pause 1` to pause the timer, like during a cutscene, and you can use `scoreboard players set @a MCCreations.Leaderboard.Reset 1` to reset the leaderboard for a player
-
-Finally, you can use `scoreboard players set .var MCCreations.Leaderboards.ResetOnReload 1` to cause the datapack to reset automatically on reload/relog.
+You can also use `scoreboard players set @a MCCreations.Leaderboards.Pause 1` to pause the timer, like during a cutscene, and you can use `scoreboard players set @a MCCreations.Leaderboard.Reset 1` to reset the leaderboard for a player.
 
 ### When Using MCCreations
 If you are submitting your content to MCCreations, simply check "Use Leaderboards" during the submission process and this pack will automatically be added to your creation
@@ -28,20 +26,27 @@ The datapack also features some extra toggle options that you can choose to turn
 
 #### Time Display
 You can enable a timer display in the action bar by running
-```
+```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.DisplayTime 1
 ```
 
-### Allow Non-OPs to Control the Leaderboard
+#### Allow Non-OPs to Control the Leaderboard
 By default, only oped players have permission to make changes to the leaderboard, like stopping or starting it. To change this, run
-```
+```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.EnableTriggers 1
-```
+```mcfunction
 
 This will allow non-op players to use the following commands, which are equivalent to the commands above:
-```
+```mcfunction
 /trigger MCCreations.Leaderboards.Start
 /trigger MCCreations.Leaderboards.Pause
 /trigger MCCreations.Leaderboards.End
 /trigger MCCreations.Leaderboards.DisplayTime
 ```
+
+#### Reset on Reload
+You can configure the datapack to be reset on reload or relog using the command
+```mcfunction
+scoreboard players set .var MCCreations.Leaderboards.ResetOnReload 1
+```
+This will delete all leaderboard data and scores when the pack is reloaded
