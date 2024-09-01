@@ -34,7 +34,7 @@ scoreboard players set @a MCCreations.Leaderboards.DisplayTime 1
 By default, only oped players have permission to make changes to the leaderboard, like stopping or starting it. To change this, run
 ```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.EnableTriggers 1
-```mcfunction
+```
 
 This will allow non-op players to use the following commands, which are equivalent to the commands above:
 ```mcfunction
