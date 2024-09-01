@@ -17,7 +17,7 @@ function bt(min, max, path, type, slug, message_text, formatting) {
     let text = ""
     if(max - min < 200) {
         for(let i = min; i <= max; i++) {
-            text += `execute if score @s MCCreations.Leaderboards.Time matches ${i} run tellraw @s [{"text":"${message_text}", ${formatting} "clickEvent": {"action": "open_url", "value": "https://mccreations.net/leaderboards/submit?type=${type}&slug=${slug}&time=${i}"}}]\n`
+            text += `execute if score @s MCCreations.Leaderboards.Time matches ${i} run tellraw @s [{"text":"${message_text}", ${formatting} "clickEvent": {"action": "open_url", "value": "https://mccreations.net/leaderboards/${type}s/${slug}/submit?&time=${i}"}}]\n`
         }
         try {
             fs.mkdirSync(path, {recursive: true})
