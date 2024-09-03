@@ -9,28 +9,28 @@ const rl = readline.createInterface({
 })
 
 function generateSubmissionFunctions(type, slug, message_text, formatting) {
-    bt(0, MAX_TIME, "data/mccreations/function/leaderboards/submit/gen", type, slug, message_text, formatting);
+    bt(0, MAX_TIME, "data/mccreations/function/leaderboards/submit/gen", "gen", type, slug, message_text, formatting);
     fs.writeFile("data/mccreations/function/leaderboards/submit/gen.mcfunction", `execute if score @s MCCreations.Leaderboards.Time matches 0..360000 run function mccreations:leaderboards/submit/gen/node`, () => {});
 }
 
-function bt(min, max, path, type, slug, message_text, formatting) {
+function bt(min, max, path, dataPath, type, slug, message_text, formatting) {
     let text = ""
     if(max - min < 200) {
         for(let i = min; i <= max; i++) {
             text += `execute if score @s MCCreations.Leaderboards.Time matches ${i} run tellraw @s [{"text":"${message_text}", ${formatting} "clickEvent": {"action": "open_url", "value": "https://mccreations.net/leaderboards/${type}s/${slug}/submit?&time=${i}"}}]\n`
         }
         try {
-            fs.mkdirSync(path, {recursive: true})
+            mkdirSync(path, {recursive: true})
         } catch (e) {
             if(e.code !== "EEXIST") {
                 throw e;
             }
         }
-        fs.writeFile(path + `/node.mcfunction`, text, () => {});
+        writeFile(path + `/node.mcfunction`, text, () => {});
     } else {
         let mid = Math.floor((min + max) / 2);
         try {
-            fs.mkdirSync(path, {recursive: true})
+            mkdirSync(path, {recursive: true})
         } catch (e) {
             if(e.code !== "EEXIST") {
                 throw e;
@@ -38,13 +38,14 @@ function bt(min, max, path, type, slug, message_text, formatting) {
         }
 
         text = `tellraw @a[tag=mccreations_leaderboards_debug] [{"text":"${path}","color":"green"}]\n`
-        text += `execute if score @s MCCreations.Leaderboards.Time matches ${min}..${mid} run function mccreations:leaderboards/submit/${path}/${min}_${mid}/node\n`
-        text += `execute if score @s MCCreations.Leaderboards.Time matches ${mid+1}..${max} run function mccreations:leaderboards/submit/${path}/${mid+1}_${max}/node`
+        text += `execute if score @s MCCreations.Leaderboards.Time matches ${min}..${mid} run function mccreations:leaderboards/submit/${dataPath}/${min}_${mid}/node\n`
+        text += `execute if score @s MCCreations.Leaderboards.Time matches ${mid+1}..${max} run function mccreations:leaderboards/submit/${dataPath}/${mid+1}_${max}/node`
 
-        fs.writeFile(path + `/node.mcfunction`, text, () => {});
-        bt(min, mid, path + `/${min}_${mid}`, type, slug, message_text, formatting);
-        bt(mid+1, max, path + `/${mid+1}_${max}`, type, slug, message_text, formatting);
+        writeFile(path + `/node.mcfunction`, text, () => {});
+        bt(min, mid, path + `/${min}_${mid}`, dataPath + `/${min}_${mid}`, type, slug, message_text, formatting);
+        bt(mid+1, max, path + `/${mid+1}_${max}`, dataPath + `/${min}_${mid}`,type, slug, message_text, formatting);
     }
+    return true
 }
 
 rl.question("Enter the type of creation you're adding the leaderboard to (map, datapack): \n", (type) => {
