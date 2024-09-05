@@ -46,7 +46,7 @@ function bt(min, max, path, dataPath, type, slug, message_text, formatting) {
 
         fs.writeFile(path + `/node.mcfunction`, text, () => {});
         bt(min, mid, path + `/${min}_${mid}`, dataPath + `/${min}_${mid}`, type, slug, message_text, formatting);
-        bt(mid+1, max, path + `/${mid+1}_${max}`, dataPath + `/${min}_${mid}`,type, slug, message_text, formatting);
+        bt(mid+1, max, path + `/${mid+1}_${max}`, dataPath + `/${mid+1}_${max}`,type, slug, message_text, formatting);
     }
     return true
 }
