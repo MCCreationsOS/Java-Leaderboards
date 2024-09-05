@@ -11,6 +11,9 @@ const rl = readline.createInterface({
 function generateSubmissionFunctions(type, slug, message_text, formatting) {
     bt(0, MAX_TIME, "data/mccreations/function/leaderboards/submit/gen", "gen", type, slug, message_text, formatting);
     fs.writeFile("data/mccreations/function/leaderboards/submit/gen.mcfunction", `execute if score @s MCCreations.Leaderboards.Time matches 0..360000 run function mccreations:leaderboards/submit/gen/node`, () => {});
+
+    bt(0, MAX_TIME, "older_versions/data/mccreations/function/leaderboards/submit/gen", "gen", type, slug, message_text, formatting);
+    fs.writeFile("older_versions/data/mccreations/function/leaderboards/submit/gen.mcfunction", `execute if score @s MCCreations.Leaderboards.Time matches 0..360000 run function mccreations:leaderboards/submit/gen/node`, () => {});
 }
 
 function bt(min, max, path, dataPath, type, slug, message_text, formatting) {
