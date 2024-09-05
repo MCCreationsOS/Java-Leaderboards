@@ -10,7 +10,7 @@
 You can also use `scoreboard players set @a MCCreations.Leaderboards.Pause 1` to pause the timer, like during a cutscene, and you can use `scoreboard players set @a MCCreations.Leaderboard.Reset 1` to reset the leaderboard for a player.
 
 ### When Uploading Directly to MCCreations
-If you are submitting your content to MCCreations, simply check "Use Leaderboards" during the submission process and this pack will automatically be added to your creation
+If you are submitting your content to MCCreations, simply check "Use Leaderboards" during the submission process and this pack will automatically be added to your creation. You still need to do the setup above, however.
 
 ### When Using File Hosting or Uploading to Other Sites
 If you plan on uploading your creation to other sites, or want to use a file hosting service like Mediafire instead of uploading directly to MCCreations, you need to perform a few steps to setup this datapack for your use.
