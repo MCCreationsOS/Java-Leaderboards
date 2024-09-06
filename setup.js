@@ -9,10 +9,10 @@ const rl = readline.createInterface({
 })
 
 function generateSubmissionFunctions(type, slug, message_text, formatting, score_type) {
-    bt(0, MAX_TIME, "data/mccreations/function/leaderboards/submit/gen", "gen", type, slug, message_text, formatting);
+    bt(0, MAX_TIME, "data/mccreations/function/leaderboards/submit/gen", "gen", type, slug, message_text, formatting, score_type);
     fs.writeFile("data/mccreations/function/leaderboards/submit/gen.mcfunction", `execute if score @s MCCreations.Leaderboards.Score matches 0..360000 run function mccreations:leaderboards/submit/gen/node`, () => {});
 
-    bt(0, MAX_TIME, "older_versions/data/mccreations/functions/leaderboards/submit/gen", "gen", type, slug, message_text, formatting);
+    bt(0, MAX_TIME, "older_versions/data/mccreations/functions/leaderboards/submit/gen", "gen", type, slug, message_text, formatting, score_type);
     fs.writeFileSync("older_versions/data/mccreations/functions/leaderboards/submit/gen.mcfunction", `execute if score @s MCCreations.Leaderboards.Score matches 0..360000 run function mccreations:leaderboards/submit/gen/node`, () => {});
 }
 
