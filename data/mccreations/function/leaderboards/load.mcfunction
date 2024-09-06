@@ -13,7 +13,7 @@ execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run score
 execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.Pause
 execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.End
 execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.Reset
-execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.Time
+execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.Score
 execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.Running
 execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.DisplayTime
 execute if score .var MCCreations.Leaderboards.ResetOnReload matches 1 run scoreboard objectives remove MCCreations.Leaderboards.EnableTriggers
@@ -32,7 +32,7 @@ scoreboard objectives add MCCreations.Leaderboards.ResetOnReload trigger
 scoreboard objectives add MCCreations.Leaderboards.EnableTriggers dummy
 
 # Add dummy objectives. These are used to store the data for the leaderboards, you should not modify them
-scoreboard objectives add MCCreations.Leaderboards.Time dummy
+scoreboard objectives add MCCreations.Leaderboards.Score dummy
 scoreboard objectives add MCCreations.Leaderboards.Running dummy
 scoreboard objectives add MCCreations.Leaderboards.Math dummy
 

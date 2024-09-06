@@ -17,7 +17,7 @@ execute if score @s MCCreations.Leaderboards.Start matches 1.. run scoreboard pl
 execute if score @s MCCreations.Leaderboards.Pause matches 1.. run scoreboard players set @s MCCreations.Leaderboards.Running 0
 execute if score @s MCCreations.Leaderboards.End matches 1.. run function mccreations:leaderboards/end
 execute if score @s MCCreations.Leaderboards.DisplayTime matches 1.. run function mccreations:leaderboards/display
-execute if score @s MCCreations.Leaderboards.Reset matches 1.. run scoreboard players reset @s MCCreations.Leaderboards.Time
+execute if score @s MCCreations.Leaderboards.Reset matches 1.. run scoreboard players reset @s MCCreations.Leaderboards.Score
 
 scoreboard players reset @s[scores={MCCreations.Leaderboards.Start=1..}] MCCreations.Leaderboards.Start
 scoreboard players reset @s[scores={MCCreations.Leaderboards.Pause=1..}] MCCreations.Leaderboards.Pause

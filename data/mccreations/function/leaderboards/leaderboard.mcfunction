@@ -8,4 +8,4 @@
  # Created by CrazyCowMM.
 ##
 
-scoreboard players add @s MCCreations.Leaderboards.Time 1
+scoreboard players add @s MCCreations.Leaderboards.Score 1

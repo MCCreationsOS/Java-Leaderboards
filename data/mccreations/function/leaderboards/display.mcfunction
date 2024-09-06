@@ -4,10 +4,10 @@
  #
  # Created by CrazyCowMM.
 ##
-scoreboard players operation Ticks MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Time
-scoreboard players operation Seconds MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Time
-scoreboard players operation Minutes MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Time
-scoreboard players operation Hours MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Time
+scoreboard players operation Ticks MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Score
+scoreboard players operation Seconds MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Score
+scoreboard players operation Minutes MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Score
+scoreboard players operation Hours MCCreations.Leaderboards.Math = @s MCCreations.Leaderboards.Score
 
 
 scoreboard players operation Ticks MCCreations.Leaderboards.Math %= Twenty MCCreations.Leaderboards.Math
