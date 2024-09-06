@@ -24,6 +24,12 @@ If you plan on uploading your creation to other sites, or want to use a file hos
 ## Additional Setup
 The datapack also features some extra toggle options that you can choose to turn on.
 
+### Custom Scoring
+By default, leaderboards will use time to score players. However, if your creation has it's own scoring system you will need to do a few things differently
+1. During setup, set your score type as highest_score or lowest_score
+2. Don't use MCCreations.Leaderboards.Start. Instead, whenever players earn score add it to MCCreations.Leaderboards.Score
+3. When your creation finishes, run MCCreations.Leaderboards.End
+
 ### Time Display
 You can enable a timer display in the action bar by running
 ```mcfunction
