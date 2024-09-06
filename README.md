@@ -9,9 +9,12 @@
 
 You can also use ```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.Pause 1
-``` to pause the timer, like during a cutscene, and you can use ```mcfunction
+``` 
+to pause the timer, like during a cutscene, and you can use
+```mcfunction
 scoreboard players set @a MCCreations.Leaderboard.Reset 1
-``` to reset the leaderboard for a player.
+```
+to reset the leaderboard for a player.
 
 ### When Uploading Directly to MCCreations
 If you are submitting your content to MCCreations, simply check "Use Leaderboards" during the submission process and this pack will automatically be added to your creation. You still need to do the setup above, however.
@@ -32,7 +35,8 @@ The datapack also features some extra toggle options that you can choose to turn
 By default, leaderboards will use time to score players. However, if your creation has it's own scoring system you will need to do a few things differently
 1. During setup, set your score type as highest_score or lowest_score
 2. Don't use MCCreations.Leaderboards.Start. Instead, whenever players earn score add it to MCCreations.Leaderboards.Score
-3. When your creation finishes, run ```mcfunction
+3. When your creation finishes, run
+```mcfunction
 scoreboard players set @s MCCreations.Leaderboards.End 1
 ```
 
