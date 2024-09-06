@@ -4,18 +4,24 @@
 ## Setup
 
 ### Setting Up Your Creation
-1. Add the command ```scoreboard players set @a MCCreations.Leaderboards.Start 1``` to the commands you run when your creation starts
-2. Add the command ```scoreboard players set @a MCCreations.Leaderboards.End 1``` to the commands you run when your creation ends
+1. Add the following command to the commands you run when your creation starts
+```mcfunction
+scoreboard players set @a MCCreations.Leaderboards.Start 1
+``` 
+2. Add the following command to the commands you run when your creation ends
+```mcfunction
+scoreboard players set @a MCCreations.Leaderboards.End 1
+```
 
-You can also use 
+You can also pause the timer
 ```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.Pause 1
 ``` 
-to pause the timer, like during a cutscene, and you can use
+Or reset it
 ```mcfunction
 scoreboard players set @a MCCreations.Leaderboard.Reset 1
 ```
-to reset the leaderboard for a player.
+
 
 ### When Uploading Directly to MCCreations
 If you are submitting your content to MCCreations, simply check "Use Leaderboards" during the submission process and this pack will automatically be added to your creation. You still need to do the setup above, however.
