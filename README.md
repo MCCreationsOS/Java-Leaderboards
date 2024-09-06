@@ -2,7 +2,7 @@
  Easily implement leaderboards into your Minecraft Java Edition project!
 
 ## Setup
-
+If you don't like to read, you can watch a video tutorial [here](https://www.youtube.com/watch?v=J-jFLN4VRaI)
 ### Setting Up Your Creation
 ```mcfunction
 # Add the following command to the commands you run when your creation starts
