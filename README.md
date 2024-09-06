@@ -7,7 +7,8 @@
 1. Add the command ```scoreboard players set @a MCCreations.Leaderboards.Start 1``` to the commands you run when your creation starts
 2. Add the command ```scoreboard players set @a MCCreations.Leaderboards.End 1``` to the commands you run when your creation ends
 
-You can also use ```mcfunction
+You can also use 
+```mcfunction
 scoreboard players set @a MCCreations.Leaderboards.Pause 1
 ``` 
 to pause the timer, like during a cutscene, and you can use
