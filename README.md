@@ -4,23 +4,21 @@
 ## Setup
 
 ### Setting Up Your Creation
-1. Add the following command to the commands you run when your creation starts
 ```mcfunction
+# Add the following command to the commands you run when your creation starts
 scoreboard players set @a MCCreations.Leaderboards.Start 1
-``` 
-2. Add the following command to the commands you run when your creation ends
-```mcfunction
-scoreboard players set @a MCCreations.Leaderboards.End 1
-```
 
-You can also pause the timer
-```mcfunction
+# Add the following command to the commands you run when your creation ends
+scoreboard players set @a MCCreations.Leaderboards.End 1
+
+# ------------------------------------------------------------------------------
+
+# You can also pause the timer
 scoreboard players set @a MCCreations.Leaderboards.Pause 1
-``` 
-Or reset it
-```mcfunction
+
+# Or reset it
 scoreboard players set @a MCCreations.Leaderboard.Reset 1
-```
+``` 
 
 
 ### When Uploading Directly to MCCreations
